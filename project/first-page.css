@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+nav{
+    height: 20vh;
+    background-color: rgb(243, 244, 226);
+}
+.logo{
+    float: left;
+    font-size: 30px;
+}
+.items{
+    margin-top: 30px;
+}
+.nav-bar,.logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-top: 5vh;
+}
+@media (max-width:540px) {
+    .nav-bar{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 0px;
+        padding: 30px;
+    }
+    .items{
+        margin-top: 0px;
+    }
+}
+.box{
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.box:hover{
+    border: 4px solid #f0f;
+}
+.box h2{
+    color: aliceblue;
+    padding: 10px;
+    margin-top: 15px;
+}
+form .inputBox input{
+    height: 40px;
+    width: 80%;
+    border-radius: 16px;
+    padding: 10px;
+}
+form .inputBox .items{
+    margin-top: 10px;
+}
+.paragraph{
+    color: aliceblue;
+    font-size: 15px;
+    padding: 6px;
+}
+.check{
+    display: flex;
+    color: aliceblue;
+    padding: 15px;
+}
+form a{
+    padding: 15px; 
+    color: aliceblue;
+    text-decoration: none;
+}
+form a:hover{
+    padding: 15px; 
+    color: blue;
+    transition: 0.5s;
+}
+.btn{
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 20px;
+    background-color: rgb(214, 104, 122);
+    border-radius: 30px;
+    outline: none;
+    margin: 20px;
+    border: none;
+}
+.inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inputBox i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; 
+    border-radius: 16px;
+    border: 1px solid #ccc;
+}
+
+.inputBox input::placeholder {
+    color: #999;
+}
+
+
+/* neon button */
+.neon-button {
+    background-color: #111; 
+    border: 2px solid #f0f; 
+    color: #f0f; 
+    font-size: 1.5em;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 15px; 
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin: 20px;
+}
+
+.neon-button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 105, 180, 0.3); 
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+}
+
+.neon-button:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.neon-button:hover {
+    color: #000; 
+    background-color: #f0f;
+}
+
+.neon-button span {
+    position: relative;
+    z-index: 1;
+}
