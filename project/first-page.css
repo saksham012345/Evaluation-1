@@ -18,15 +18,25 @@ nav{
 }
 .logo{
     float: left;
-    font-size: 30px;
+    font-size: 40px;
+    color: white;
 }
 .items{
     margin-top: 30px;
-    color: #f0f;
+    color: #00a99d;
 }
 .items:hover{
-    margin-top: 30px;
+    /* margin-top: 30px; */
     color: white;
+}
+.Appointment{
+    height: 40px;
+    width: 90px;
+    color: white;
+    background-color:#00a99d;
+    outline: none;
+    border: none;
+    border-radius: 8px;
 }
 .nav-bar,.logo{
     display: flex;
@@ -34,8 +44,9 @@ nav{
     align-items: center;
     padding: 20px;
     margin-top: 5vh;
+    /* border: 2px solid white; */
 }
-@media (max-width:540px) {
+@media (max-width:800px) {
     .nav-bar{
         display: flex;
         flex-direction: column;
@@ -45,6 +56,11 @@ nav{
     }
     .items{
         margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .Appointment{
+        visibility: hidden;
     }
 }
 p{
@@ -61,10 +77,10 @@ p{
     overflow: hidden;
 }
 .box:hover{
-    border-left: 4px solid #f0f;
+    border-left: 4px solid #00a99d;
     border-bottom: 4px solid #04d9ff;
     border-top: 4px solid #04d9ff;
-    border-right: 4px solid #f0f;
+    border-right: 4px solid #00a99d;
     transition: 2s;
     animation: animateborder 2s 2s 0s infinite linear;
 }
@@ -80,7 +96,7 @@ form .inputBox input{
     padding: 10px;
 }
 form .inputBox input:hover{
-    border: 2px solid #f0f;
+    border: 2px solid #00a99d;
 }
 form .inputBox .items{
     margin-top: 10px;
@@ -144,8 +160,8 @@ form a:hover{
 /* neon button */
 .neon-button {
     background-color: #111; 
-    border: 2px solid #f0f; 
-    color: #f0f; 
+    border: 2px solid #00a99d; 
+    color: #00a99d; 
     font-size: 1.5em;
     padding: 10px 20px;
     cursor: pointer;
@@ -164,7 +180,7 @@ form a:hover{
     left: 50%;
     width: 200%;
     height: 200%;
-    background: rgba(255, 105, 180, 0.3); 
+    background: rgba(0, 169, 157, 0.3); 
     border-radius: 50%;
     transition: all 0.4s ease;
     transform: translate(-50%, -50%) scale(0);
@@ -177,7 +193,7 @@ form a:hover{
 
 .neon-button:hover {
     color: #000; 
-    background-color: #f0f;
+    background-color: #00a99d;
 }
 
 .neon-button span {
@@ -211,6 +227,113 @@ form a:hover{
 h3{
     color: aliceblue;
 }
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 35px;
+}
+.des{
+    color: #2C4964;
+}
 @media (max-width:540px){
     flex-wrap: wrap;
+}
+.intro{
+    color: #2C4964;
+    padding: 100px;
+}
+
+.template{
+    background-image: url(https://bootstrapmade.com/demo/templates/Medilab/assets/img/hero-bg.jpg);
+    height: fit-content;
+    width: 100%;
+    background-size: 100% 100%;
+}
+.carousel{
+    height: fit-content;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+@media (max-width:900px){
+    .carousel{
+        height: fit-content;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+} 
+.card {
+    position: relative;
+    width: 60%;
+    height: 40vh;
+    margin: 15px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.card:hover{
+    position: relative;
+    width: 65%;
+    height: 45vh;
+    margin: 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 2s;
+}
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    z-index: 1; /* Place it below the content */
+}
+
+.card .int, .card h2 {
+    position: relative;
+    color: black;
+    z-index: 2; /* Place it above the background */
+}
+.int{
+    padding: 35px;
+}
+.container   
+ {
+    display: flex;
+    justify-content: space-around;   
+
+}
+
+.set{
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+
+}
+
+.card-icon {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #666;
 }
