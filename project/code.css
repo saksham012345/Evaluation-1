@@ -15,6 +15,9 @@
 nav{
     height: 20vh;
     background-color: black;
+    width: 100%;
+    color: #00a99d;
+    position: fixed;
 }
 .logo{
     float: left;
@@ -69,12 +72,12 @@ p{
     margin: 12px;
 }
 .box{
-    position: relative;
+    /* position: relative; */
     width: 380px;
     height: 450px;
     background: #1c1c1c;
     border-radius: 8px;
-    overflow: hidden;
+    margin-top:200px ;
 }
 .box:hover{
     border-left: 4px solid #00a99d;
@@ -132,13 +135,12 @@ form a:hover{
     border: none;
 }
 .inputBox {
-    position: relative;
+    /* position: relative; */
     width: 100%;
     margin-bottom: 20px;
 }
 
 .inputBox i {
-    position: absolute;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
@@ -295,13 +297,13 @@ h2{
 .card .int, .card h2 {
     position: relative;
     color: black;
-    z-index: 2; /* Place it above the background */
+    z-index: 2; 
 }
 .int{
     padding: 35px;
 }
 .container   
- {
+{
     display: flex;
     justify-content: space-around;   
 
@@ -336,4 +338,54 @@ h2{
 .card-content p {
     font-size: 16px;
     color: #666;
+}
+.carousel-2{
+    display: flex;
+    width: 70%;
+}
+.carousel-2 .note{
+    width: 40%;
+    height: 47vh;
+    padding: 20px;
+    margin: 20px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 10px rgb(240, 240, 240);
+}
+
+.carousel-2 .note:hover{
+    height: 48vh;
+    width:63.5%;
+}
+.carousel-2 button{
+    background-color: white;
+    color:#1B71A1 ;
+    height: 6vh;
+    width: 40%;
+    margin: 10px;
+    border-radius: 25px;
+    border: 2px solid #1B71A1;
+}
+.carousel-2 button:hover{
+    color: white;
+    background-color:#1B71A1 ;
+}
+@media (max-width:900px){
+    .carousel-2{
+        display: flex;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .carousel-2 .note{
+        width: 60%;
+    }
+} 
+.hr{
+    height: 3px;
+    width: 13rem;
+    background-color:  #1B71A1;
+    border-radius: 3px;
 }
