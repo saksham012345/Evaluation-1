@@ -4,31 +4,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Navbar</title>
+  <title>Meditech</title>
   <link rel="stylesheet" href="home.css">
 </head>
 <body>
+  <!-- navbar -->
+   <section id="#Home">
   <nav>
     <div class="img-logo"></div>
-    <ul class="sidebar">
-      <li><a href="#">Login/sign-up</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">About us</a></li>
-      <li><a href="#">Home</a></li>
-      <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+    <ul class="main-nav">
+      <li><a href="#Home"><b>Home</b></a></li>
+      <li><a href="#About-us"><b>About us</b></a></li>
+      <li><a href="#"><b>Services</b></a></li>
+      <li><a href="#Contact"><b>Contact</b></a></li>
+      <li><a href="code.html"> <b>Login/sign-up</b></a></li>
     </ul>
-
-    <ul>
-      <li class="hideOnMobile"><a href="#">Home</a></li>
-      <li class="hideOnMobile"><a href="#">About us</a></li>
-      <li class="hideOnMobile"><a href="#">Services</a></li>
-      <li class="hideOnMobile"><a href="#">Contact</a></li>
-      <li class="hideOnMobile"><a href="#">Login/sign-up</a></li>
-      <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
-    </ul>
+    <div class="menu-button" onclick="toggleSidebar()">
+      <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
+    </div>
   </nav>
+</section>
 
+  <!-- sidebar -->
+  <ul class="sidebar">
+    <li><a href="#Home">Home</a></li>
+    <li><a href="#About-us">About us</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#Contact">Contact</a></li>
+    <li><a href="code.html">Login/sign-up</a></li>
+    <li onclick="toggleSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+  </ul>
+
+
+ <!-- slideshow -->
   <section class="slider">
     <figure onmouseover="pauseSlideshow()" onmouseout="resumeSlideshow()">
       <div class="slide">
@@ -61,18 +69,101 @@
       </div>
     </figure>
   </section>
+
+  <!--  Modal Structure -->
+  <div id="appointmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>Make an Appointment</h2>
+      <form id="appointmentForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+ <!-- about page  -->
+  <section id="About-us">
+  <section id="hardworking">
+    <div class="content">
+      <div class="text">
+        <h2> <i>Dedicated and Hardworking Medical Professionals</i></h2>
+        <br><p>Our team of doctors and healthcare professionals is committed to providing the highest quality of care. 
+          We pride ourselves on our dedication and hard work, ensuring that every patient receives personalized
+           attention and the best treatment possible. Our staff goes above and beyond to make sure that your health and well-being are our top priority.</p>
+        <br>
+        <p> <b>We are available 24/7 to meet your healthcare needs.
+           Whether you need urgent care or have a scheduled appointment, you can count on us to be here for you around the clock.</b> </p>
+      </div>
+      <div class="photo">
+        <img src="pic5.jpg" alt="Our Hardworking Doctors">
+      </div>
+    </div>
+  </section>
+  <section id="patient-care">
+    <div class="content">
+      <div class="photo">
+        <img src="pic6.jpg" alt="Patient Care">
+      </div>
+      <div class="text">
+        <h2> <i>Exceptional Patient Care </i></h2>
+        <p>At our healthcare facility, we are dedicated to providing exceptional patient care.
+           Our team of healthcare professionals works tirelessly to ensure that each patient receives
+            the highest quality of treatment and support. We believe that every patient deserves personalized care that addresses their unique needs and concerns.</p> <br>
+        <p><b> We strive to create a comfortable and welcoming environment for all our patients.
+          Our goal is to make you feel at ease and confident in our ability to provide the best possible</b>
+        <p> <br>
+          From routine check-ups to complex procedures, we are committed to delivering 
+          compassionate and comprehensive care. Our state-of-the-art facilities and cutting-edge technology enable
+           us to offer advanced medical solutions and maintain the highest standards of care.</p>
+      </div>
+    </div>
+  </section>
+</section>
+   <!-- footer -->
+   <section id ="Contact">
+  <footer>
+    <div class="footer-content">
+      <div class="footer-text">
+        <p>Find the nearest doctor easily with our interactive map.</p>
+        <p>© 2024 Your Healthcare Company. All rights reserved.</p>
+      </div>
+      <div class="footer-map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3437.174971799996!2d76.65720287502891!3d30.5160910960714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc32344a6e2d7%3A0x81b346dee91799ca!2sChitkara%20University!5e0!3m2!1sen!2sin!4v1724589186759!5m2!1sen!2sin" 
+          width="600" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </footer>
+</section>
   
+
   <script>
-    function showSidebar() {
-      const sidebar = document.querySelector('.sidebar');
-      sidebar.style.display = 'flex';
-    }
+  
 
-    function hideSidebar() {
+     //  sidebar 
+     function toggleSidebar() {
       const sidebar = document.querySelector('.sidebar');
-      sidebar.style.display = 'none';
-    }
+      sidebar.classList.toggle('active'); }
 
+    // slideshow
     let isPaused = false;
 
     function pauseSlideshow() {
@@ -88,6 +179,52 @@
         isPaused = false;
       }
     }
+
+    // Show the modal
+    function showModal() {
+      const modal = document.getElementById('appointmentModal');
+      modal.style.display = 'block';
+      setTimeout(() => modal.classList.add('show'), 10); 
+    }
+
+    // Close the modal
+    function closeModal() {
+      const modal = document.getElementById('appointmentModal');
+      modal.classList.remove('show');
+      setTimeout(() => modal.style.display = 'none', 300); 
+    }
+
+    
+    document.querySelectorAll('.appointment-btn').forEach(button => {
+      button.addEventListener('click', showModal);
+    });
+
+    
+    window.onclick = function(event) {
+      const modal = document.getElementById('appointmentModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+
+    
+    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const date = document.getElementById('date').value;
+
+      if (name && email && date) {
+        alert('Appointment request submitted successfully!');
+        closeModal();
+      } else {
+        alert('Please fill out all required fields.');
+      }
+    });
+
+    
   </script>
 </body>
 </html>
