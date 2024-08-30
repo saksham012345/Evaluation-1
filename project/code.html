@@ -6,47 +6,38 @@
     <link rel="stylesheet" href="code.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Document</title>
+    <title>login-page</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <div class="img-logo"></div>
-                <div class="details">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                          <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
-                          </li>
-                          <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Services
-                            </a>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Virtual Consultations</a></li>
-                              <li><a class="dropdown-item" href="#">Appointment Scheduling</a></li>
-                              <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item" href="#">Patients Portals</a></li>
-                            </ul>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Book free Therapy session</a>
-                          </li>
-                        </ul>
-                </div>
-              </div>
-            </div>
-          </nav>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        
-    </header>
+  <!-- navbar -->
+  <section id="#Home">
+    <nav>
+      <div class="img-logo"></div>
+      <ul class="main-nav">
+        <li><a href="home.html"><b>Home</b></a></li>
+        <li><a href="home.html"><b>About us</b></a></li>
+        <li><a href="home.html"><b>Services</b></a></li>
+        <li><a href="home.html"><b>Contact</b></a></li>
+        <li><a href="code.html"> <b>Login/sign-up</b></a></li>
+      </ul>
+      <div class="menu-button" onclick="toggleSidebar()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
+      </div>
+    </nav>
+  </section>
+  
+    <!-- sidebar -->
+    <ul class="sidebar">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="home.html">About us</a></li>
+      <li><a href="home.html">Services</a></li>
+      <li><a href="home.html">Contact</a></li>
+      <li><a href="code.html">Login/sign-up</a></li>
+      <li onclick="toggleSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+    </ul>  
+
+
+
 
     <!-- login -->
     <center>
@@ -81,92 +72,15 @@
         </div>
     </center>
     
-    <!-- section -->
-    <section>
-        <div class="template">
-            <div class="intro">
-                <h1>WELCOME TO MEDITECH</h1>
-                <h2>We are team of experienced doctors.</h2>
-            </div>
-            <center>
-                <div class="carousel">
-                    <div class="card">
-                        <center>
-                            <div class="int">
-                                <img src="https://img.icons8.com/?size=50&id=11698&format=png" width="70px" alt="">
-                                <h2>Primary Care Services</h2>
-                                <p class="des">"Your health is our priority—providing comprehensive, compassionate care at every stage of life."</p>
-                            </div>
-                        </center>
-                    </div>
-                    <div class="card">
-                        <center>
-                            <div class="int">
-                                <img src="data:image/png;base64,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" width="70px" alt="">
-                                <h2>Specialty Consultations</h2>
-                                <p class="des">"Expert care tailored to your needs—connecting you with specialists for precise diagnosis and advanced treatment."</p>
-                            </div>
-                        </center>
-                    </div>
-                    <div class="card">
-                        <center>
-                            <div class="int">
-                                <img src="https://www.svgrepo.com/show/307359/human-heart-heart.svg" width="70px" alt="">
-                                <h2>Recent Research on Heart Disease</h2>
-                                <p class="des">"Unlocking the future of heart health—exploring the latest breakthroughs and innovations in heart disease research."</p>
-                            </div>
-                        </center>
-                    </div>
-                </div>
-            </center>
-        </div>
-    </section>
+    
+    <script>
+  
 
-    <!-- carousel -->
-    <section>
-        <div style="color:#283779; font-size: 3rem; text-align: center; margin-top: 30px;"><b>OUR TEAM</b></div>
-        <center><div class="hr"></div></center>
-        <center>
-            <div class="carousel-2" style="margin: 10px">
-                <div class="note">
-                    <center>
-                        <img src="https://technext.github.io/live-doc/v1.0.0/assets/img/gallery/anita.png" alt="">
-                    <h3 style="color:#283779 ;">Anita Desai</h3>
-                    <ul style="list-style: none;">
-                        <li class="skills" style="color: #1B71A1;">Pediatrics, Gochi Medicine</li>
-                        <li class="skills">Florida, United States</li>
-                        <li class="skills">10 years experience</li>
-                    </ul>
-                    <button>View Profile</button>
-                    </center>
-                </div>
-                <div class="note">
-                    <center>
-                        <img src="https://technext.github.io/live-doc/v1.0.0/assets/img/gallery/jane.png" alt="">
-                    <h3 style="color:#283779 ;">Jane Flakis</h3>
-                    <ul style="list-style: none;">
-                        <li class="skills" style="color: #1B71A1;">Gynaecology,Abenka Care</li>
-                        <li class="skills">Melbourne,Australia</li>
-                        <li class="skills">12 years experience</li>
-                    </ul>
-                    <button>View Profile</button>
-                    </center>
-                </div>
-                <div class="note">
-                    <center>
-                        <img src="https://technext.github.io/live-doc/v1.0.0/assets/img/gallery/leo-mario.png" alt="">
-                    <h3 style="color:#283779 ;">Leo Mario</h3>
-                    <ul style="list-style: none;">
-                        <li class="skills" style="color: #1B71A1;">Physiotherapy,Fitcare</li>
-                        <li class="skills">London, England</li>
-                        <li class="skills">25 years experience</li>
-                    </ul>
-                    <button>View Profile</button>
-                    </center>
-                </div>
-            </div>
-        </center>
-    </section>
-
+      //  sidebar 
+      function toggleSidebar() {
+       const sidebar = document.querySelector('.sidebar');
+       sidebar.classList.toggle('active'); }
+ </script>
+    
 </body>
 </html>
