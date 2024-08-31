@@ -145,6 +145,27 @@ p{
     color: white;
     margin: 12px;
 }
+.body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 50%;
+  padding: 10vh;
+  background-color: black;
+  border-radius: 2%;
+  margin-top: 70px;
+}
+.background{
+  height: 120vh;
+  width: 100%;
+  background-image: url(https://medi-pedia.com/wp-content/uploads/2016/08/medical-hd-photo-1080p-hdwallwide.com_.jpg);
+  background-size: 100% 100%;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  border: 2px solid white;
+}
 .box{
     /* position: relative; */
     width: 380px;
