@@ -21,8 +21,8 @@ body {
 
 .flip-card {
     background-color: transparent;
-    width: 240px; /* Adjusted width */
-    height: 300px; /* Adjusted height */
+    width: 240px;
+    height: 300px; 
     perspective: 1000px;
     margin: 10px;
 }
@@ -52,7 +52,7 @@ body {
 
 .flip-card-front {
     background-color: white;
-    color: #283779;
+    color: #A4C3A7;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,8 +73,8 @@ body {
 }
 
 .flip-card-back {
-    background-color: #283779;
-    color: white;
+    background-color: white;
+    color: #A4C3A7;
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
@@ -101,7 +101,7 @@ body {
 }
 
 .flip-button {
-    background-color: #283779;
+    background-color: #A4C3A7;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -111,5 +111,6 @@ body {
 }
 
 .flip-button:hover {
-    background-color: #1f2c5c;
+    background-color: #A4C3A7;
+    color: white;
 }
