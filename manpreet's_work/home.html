@@ -70,29 +70,7 @@
     </figure>
   </section>
 
-  <!--  Modal Structure -->
-  <div id="appointmentModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      <h2>Make an Appointment</h2>
-      <form id="appointmentForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="date">Preferred Date:</label>
-        <input type="date" id="date" name="date" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message"></textarea>
-        
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </div>
-
+ 
  <!-- intro -->
  
   <section>
@@ -236,51 +214,6 @@
         isPaused = false;
       }
     }
-
-    // Show the modal
-    function showModal() {
-      const modal = document.getElementById('appointmentModal');
-      modal.style.display = 'block';
-      setTimeout(() => modal.classList.add('show'), 10); 
-    }
-
-    // Close the modal
-    function closeModal() {
-      const modal = document.getElementById('appointmentModal');
-      modal.classList.remove('show');
-      setTimeout(() => modal.style.display = 'none', 300); 
-    }
-
-    
-    document.querySelectorAll('.appointment-btn').forEach(button => {
-      button.addEventListener('click', showModal);
-    });
-
-    
-    window.onclick = function(event) {
-      const modal = document.getElementById('appointmentModal');
-      if (event.target === modal) {
-        closeModal();
-      }
-    }
-
-    
-    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
-      event.preventDefault(); 
-
-      
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const date = document.getElementById('date').value;
-
-      if (name && email && date) {
-        alert('Appointment request submitted successfully!');
-        closeModal();
-      } else {
-        alert('Please fill out all required fields.');
-      }
-    });
-
     
   </script>
 </body>
