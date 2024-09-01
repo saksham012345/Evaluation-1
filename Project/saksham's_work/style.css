@@ -1,0 +1,96 @@
+.container{
+    width: 90%;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 0%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.container h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 38px;
+    font-weight: bolder;
+    margin-left: 100px;
+}
+.side-container{
+    left: 0px;
+    width: 60%;
+    height: 100%;
+    clip-path: polygon(0% 0%, 70% 0%, 90% 100%, 0% 100%);
+    background: url("doctor.webp");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-repeat: no-repeat;
+}
+.side-container h1{
+    top: 10px;
+}
+.side-container p{
+    width: 70%;
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkblue;
+    margin-left: 100px;
+}
+.informationbox{
+    height: 380px;
+}
+.circle-container{
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.row1{
+    width: 100%;
+    display: flex;
+    margin: 30px auto;
+    justify-content: space-between;
+}
+.row2{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-evenly;
+}
+.circle{
+    height: 120px;
+    width: 120px;
+    border: 1px rgba(105, 221, 188, 0.984) solid;
+    border-radius: 50%;
+    transition: all .7s ease;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle img{
+    height: 120px;
+    width: 120px;
+    transition: all ease .7s;
+}
+.passive{
+    height: 100px;
+    width: 100px;
+}
+.active{
+    height: 240px;
+    width: 240px;
+}
+.circle:hover{
+    transform: scale(1.2);
+}
+.circle img:hover{
+    transform: scale(1.2);
+}
