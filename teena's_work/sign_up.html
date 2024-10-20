@@ -6,93 +6,122 @@
     <link rel="stylesheet" href="sign_up.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>sign-up page</title>
+    <title>Sign-Up Page</title>
 </head>
 <body>
-  <!-- navbar -->
-  <section id="#Home">
+  <!-- Navbar -->
+  <section id="navbar">
     <nav>
-      <div class="img-logo"></div>
-      <ul class="main-nav">
-        <li><a href="home.html"><b>Home</b></a></li>
-        <li><a href="home.html"><b>About us</b></a></li>
+      <div class="img-logo" id="logo"></div>
+      <ul class="main-nav" id="mainNav">
+        <li><a href="..\home.html"><b>Home</b></a></li>
+        <li><a href="home.html"><b>About Us</b></a></li>
         <li><a href="home.html"><b>Services</b></a></li>
         <li><a href="home.html"><b>Contact</b></a></li>
-        <li><a href="code.html"> <b>Login/sign-up</b></a></li>
+        <li><a href="code.html"><b>Login/Sign-Up</b></a></li>
       </ul>
-      <div class="menu-button" onclick="toggleSidebar()">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
+      <div class="menu-button" id="menuButton" onclick="toggleSidebar()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+          <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+        </svg>
       </div>
     </nav>
   </section>
   
-    <!-- sidebar -->
-    <ul class="sidebar">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="home.html">About us</a></li>
-      <li><a href="home.html">Services</a></li>
-      <li><a href="home.html">Contact</a></li>
-      <li><a href="code.html">Login/sign-up</a></li>
-      <li onclick="toggleSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-    </ul>  
+  <!-- Sidebar -->
+  <ul class="sidebar" id="sidebar">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="home.html">About Us</a></li>
+    <li><a href="home.html">Services</a></li>
+    <li><a href="home.html">Contact</a></li>
+    <li><a href="code.html">Login/Sign-Up</a></li>
+    <li onclick="toggleSidebar()"><a href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+        <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/>
+      </svg>
+    </a></li>
+  </ul>
 
-
-
-
-    <!-- login -->
-    <center>
-      <div class="background">
-          <center>
-          <div class="body">
-              <div class="box">
-                  <form action="">
-                      <center><h2>Create a New Account</h2></center>
-                      <div class="items">
-                          <div class="inputBox">
-                              <i class='bx bx-user-circle' ></i>
-                              <input type="text" placeholder="Set Username" required="required">
-                          </div>
-                          <div class="inputBox">
-                              <i class='bx bxs-lock-alt'></i>
-                              <input type="text" placeholder="Enter Email" required="required">
-                          </div>
-                      </div>
-                      <div class="inputBox">
-                        <i class='bx bx-phone'></i>
-                        <input type="number" placeholder="Enter Phone Number">
-                      </div>
-                      <div class="inputBox">
-                        <i class='bx bxs-lock'></i>
-                        <input type="password" placeholder="Set Password">
-                      </div>
-
-                      <div class="check">
-                        <input type="checkbox" id="remember">
-                        <label for="remember">Remember Password</label>
-                      </div>
-                      
-                      <p>
-                        By clicking register,you agree to MediTech's <b>User Agreement,Privacy Policy,and Cookie Policy.</b>
-                      </p>
-                      <center>
-                          <button type="submit" class="neon-button">Register</button>
-                      </center>
-                  </form>
+  <!-- Sign-Up Form -->
+  <center>
+    <div class="background" id="signupBackground">
+      <div class="body">
+        <div class="box" id="signupBox">
+          <form action="" id="signupForm">
+            <center><h2>Create a New Account</h2></center>
+              <div class="inputBox" id="usernameInput">
+                <i class='bx bx-user-circle'></i>
+                <input id="username" type="text" placeholder="Set Username" required>
               </div>
-          </div>
-          </center>
+              <div class="inputBox" id="passwordInput">
+                <i class='bx bxs-lock'></i>
+                <input id="password" type="password" placeholder="Set Password" required>
+              </div>
+              <div class="inputBox" id="emailInput">
+                <i class='bx bxs-envelope'></i> <!-- Corrected icon for email -->
+                <input id="email" type="email" placeholder="Enter Email" required>
+              </div>
+              <!-- <div class="inputBox" id="phoneInput">
+                <i class='bx bx-phone'></i>
+                <input id="phone" type="tel" placeholder="Enter Phone Number" required>
+              </div> -->
+            
+            <div class="check" id="rememberMe">
+              <input type="checkbox" id="remember">
+              <label for="remember">Remember Password</label>
+            </div>
+            <p>
+              By clicking register, you agree to MediTech's <b>User Agreement, Privacy Policy, and Cookie Policy.</b>
+              <button type="submit" class="neon-button" id="registerButton">Register</button>
+            </p>
+          </form>
+        </div>
       </div>
+    </div>
   </center>
-    
-    
-    <script>
-  
 
-      //  sidebar 
-      function toggleSidebar() {
-       const sidebar = document.querySelector('.sidebar');
-       sidebar.classList.toggle('active'); }
- </script>
+<script>
+    // Sidebar toggle function
+function toggleSidebar() {
+  const sidebar = document.querySelector('#sidebar');
+  sidebar.classList.toggle('active');
+}  
+
+function saveCredentials(){
+  let savedUsername=localStorage.getItem("username");
+  let savedPassword=localStorage.getItem("password");
+
+  if(savedUsername && savedPassword){
+    let hiddenPassword = hidePassword(savedPassword);
+    alert("Credentials Saved");
+    alert(`Saved Credentials: \nUsername: ${savedUsername} \nPassword: ${hiddenPassword}`);
+  }
+}
+
+function hidePassword(savedPassword){
+  let hiddenPassword="";
+  for(let i=0;i<savedPassword.length;i++){
+    hiddenPassword+='*';
+  }
+  return hiddenPassword;
+}
+
+document.getElementById('signupForm').addEventListener('submit',function(event){
+  event.preventDefault();
+
+  let username=document.getElementById('username').value;
+  let password=document.getElementById('password').value;
+
+  localStorage.setItem('username',username);
+  localStorage.setItem('password',password);
+  saveCredentials();
+
+  window.location.href='file:///C:/Users/Hp/OneDrive/Desktop/main/projects/MEDITECH/Combined/Combined/home.html';
+});
+
+
+
     
+</script>
 </body>
 </html>
