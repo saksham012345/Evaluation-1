@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-image: url('img2.webp');
+    background-size: cover;
+    background-position: center;
+    color: #2d2d2d;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Quiz Container */
+.quiz-container {
+    background-color: #b4d4b4;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    width: 600px;
+    max-width: 90%;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.quiz-container:hover {
+    transform: scale(1.02);
+}
+
+/* Heading */
+h1 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+/* Question Styling */
+#question {
+    font-size: 20px;
+    color: #2d2d2d;
+    margin-bottom: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Options Container */
+#options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#options button {
+    background-color: #f7fdf7;
+    color: #2d2d2d;
+    border: 2px solid #b4d4b4;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 500px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+#options button:hover {
+    background-color: #6f916f;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Result Container */
+#result-container {
+    display: none; /* Hidden by default until a diagnosis is shown */
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#result-container.show {
+    display: block; /* Ensure it's displayed */
+    opacity: 1;     /* Full visibility */
+    transform: translateY(0); /* Move into place */
+}
+
+/* Result Box */
+#result {
+    background-color: #d9eed9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+#result h3 {
+    color: #2d2d2d;
+    font-size: 24px;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#result p {
+    font-size: 18px;
+    color: #2d2d2d;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Result Buttons */
+.result-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    opacity: 1; /* Ensure the buttons remain fully visible */
+    animation: fadeIn 1s ease-in-out; /* Fade in the buttons */
+}
+
+.result-buttons button {
+    background-color: #f7fdf7;
+    color: #2d2d2d;
+    border: 2px solid #b4d4b4;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.result-buttons button:hover {
+    background-color: #b4d4b4;
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
