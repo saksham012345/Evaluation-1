@@ -1,338 +1,359 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    min-height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  /* Navbar  */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    background-color: white;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000; 
-  }
-  
-  .img-logo {
-    height: 5rem;
-    width: 10rem;
-    background-image: url('https://ehr.meditech.com/themes/ehrmeditech/images/meditech-logo.svg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar  */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; 
+}
+
+.img-logo {
+  height: 5rem;
+  width: 10rem;
+  background-image: url('https://ehr.meditech.com/themes/ehrmeditech/images/meditech-logo.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.main-nav {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+}
+
+.main-nav li {
+  height: 50px;
+}
+
+.main-nav a {
+  height: 100%;
+  padding: 0 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.main-nav a:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-button {
+  display: none;
+  cursor: pointer;
+  z-index: 1001; 
+}
+
+/* Sidebar  */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s ease-in-out;
+  z-index: 2000; 
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar li {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.sidebar a:hover {
+  color: #4CAF50;
+}
+
+@media (max-width: 768px) {
   .main-nav {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-left: auto;
-  }
-  
-  .main-nav li {
-    height: 50px;
-  }
-  
-  .main-nav a {
-    height: 100%;
-    padding: 0 20px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: black;
-  }
-  
-  .main-nav a:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .menu-button {
-    display: none;
-    cursor: pointer;
-    z-index: 1001; 
-  }
-  
-  
-  
-  /* Sidebar  */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 250px;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: right 0.3s ease-in-out;
-    z-index: 2000; 
-  }
-  
-  .sidebar.active {
-    right: 0;
-  }
-  
-  .sidebar li {
-    list-style: none;
-    margin: 20px 0;
-  }
-  
-  .sidebar a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.2rem;
-  }
-  
-  .sidebar a:hover {
-    color: #4CAF50;
-  }
-  
-  
-  @media (max-width: 768px) {
-    .main-nav {
       display: none;
-    }
-  
-    .menu-button {
-      display: block;
-    }
   }
-  
-  @media (max-width: 480px) {
-    .menu-button svg {
+
+  .menu-button {
+      display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-button svg {
       height: 20px;
       width: 20px;
-    }
-  
-    .sidebar a {
-      font-size: 1rem;
-    }
   }
-.body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 50%;
-    padding: 10vh;
-    background-color: black;
-    border-radius: 2%;
+
+  .sidebar a {
+      font-size: 1rem;
+  }
 }
 
-.items{
-    margin-top: 30px;
-    color: #00a99d;
-}
-.items:hover{
-    /* margin-top: 30px; */
-    color: white;
-}
-
-p{
-    font-size: 15px;
-    color: white;
-    margin: 12px;
-}
-.body{
+.body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 70vh;
   width: 50%;
   padding: 10vh;
   background-color: black;
   border-radius: 2%;
-  margin-top: 70px;
+  margin-top: 10rem;
 }
-.background{
+
+.items {
+  margin-top: 30px;
+  color: #00a99d;
+}
+
+.items:hover {
+  color: white;
+}
+
+p {
+  font-size: 15px;
+  color: white;
+  margin: 12px;
+}
+
+.background {
   height: 120vh;
   width: 100%;
   background-image: url(https://medi-pedia.com/wp-content/uploads/2016/08/medical-hd-photo-1080p-hdwallwide.com_.jpg);
   background-size: 100% 100%;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   border: 2px solid white;
 }
-.box{
-    /* position: relative; */
-    width: 380px;
-    height: 450px;
-    background: #1c1c1c;
-    border-radius: 8px;
+
+.box {
+  width: 380px;
+  height: 450px;
+  background: #1c1c1c;
+  border-radius: 8px;
 }
-.box:hover{
-    border-left: 4px solid #00a99d;
-    border-bottom: 4px solid #04d9ff;
-    border-top: 4px solid #04d9ff;
-    border-right: 4px solid #00a99d;
-    transition: 2s;
-    animation: animateborder 2s 2s 0s infinite linear;
+
+.box:hover {
+  border-left: 4px solid #00a99d;
+  border-bottom: 4px solid #04d9ff;
+  border-top: 4px solid #04d9ff;
+  border-right: 4px solid #00a99d;
+  transition: 2s;
+  animation: animateborder 2s 2s 0s infinite linear;
 }
-.box h2{
-    color: aliceblue;
-    padding: 10px;
-    margin-top: 15px;
+
+.box h2 {
+  color: aliceblue;
+  padding: 10px;
+  margin-top: 15px;
 }
-form .inputBox input{
-    height: 40px;
-    width: 80%;
-    border-radius: 16px;
-    padding: 10px;
-}
-form .inputBox input:hover{
-    border: 2px solid #00a99d;
-}
-form .inputBox .items{
-    margin-top: 10px;
-}
-.paragraph{
-    color: aliceblue;
-    font-size: 15px;
-    padding: 6px;
-}
-.check{
-    display: flex;
-    color: aliceblue;
-    padding: 15px;
-}
-form a{
-    padding: 15px; 
-    color: aliceblue;
-    text-decoration: none;
-}
-form a:hover{
-    padding: 15px; 
-    color: blue;
-    transition: 0.5s;
-}
-.btn{
-    height: 2.5rem;
-    width: 8rem;
-    font-size: 20px;
-    background-color: rgb(214, 104, 122);
-    border-radius: 30px;
-    outline: none;
-    margin: 20px;
-    border: none;
-}
+
 .inputBox {
-    /* position: relative; */
-    width: 100%;
-    margin-bottom: 20px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .inputBox i {
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: gray;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
 }
 
 .inputBox input {
-    width: 100%;
-    padding: 10px 10px 10px 40px; 
-    border-radius: 16px;
-    border: 1px solid #ccc;
+  width: 100%;
+  padding: 10px 10px 10px 40px; 
+  border-radius: 16px;
+  border: 1px solid #ccc;
 }
 
 .inputBox input::placeholder {
-    color: #999;
+  color: #999;
 }
 
+.paragraph {
+  color: aliceblue;
+  font-size: 15px;
+  padding: 6px;
+}
 
-/* neon button */
+.check {
+  display: flex;
+  color: aliceblue;
+  padding: 15px;
+}
+
+form a {
+  padding: 15px; 
+  color: aliceblue;
+  text-decoration: none;
+}
+
+form a:hover {
+  padding: 15px; 
+  color: blue;
+  transition: 0.5s;
+}
+
+.btn {
+  height: 2.5rem;
+  width: 8rem;
+  font-size: 20px;
+  background-color: rgb(214, 104, 122);
+  border-radius: 30px;
+  outline: none;
+  margin: 20px;
+  border: none;
+}
+
+.inputBox {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.inputBox i {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+}
+
+.inputBox input {
+  width: 70%;
+  padding: 10px 10px 10px 40px; 
+  border-radius: 16px;
+  border: 1px solid #ccc;
+}
+
+.inputBox input::placeholder {
+  color: #999;
+}
+
+/* Neon button */
 .neon-button {
-    background-color: #111; 
-    border: 2px solid #00a99d; 
-    color: #00a99d; 
-    font-size: 1.5em;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 15px; 
-    outline: none;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    margin: 20px;
+  background-color: #111; 
+  border: 2px solid #00a99d; 
+  color: #00a99d; 
+  font-size: 1.5em;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 15px; 
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin: 20px;
 }
 
 .neon-button:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200%;
-    height: 200%;
-    background: rgba(0, 169, 157, 0.3); 
-    border-radius: 50%;
-    transition: all 0.4s ease;
-    transform: translate(-50%, -50%) scale(0);
-    z-index: 0;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(0, 169, 157, 0.3); 
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 0;
 }
 
 .neon-button:hover:before {
-    transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .neon-button:hover {
-    color: #000; 
-    background-color: #00a99d;
+  color: #000; 
+  background-color: #00a99d;
 }
 
 .neon-button span {
-    position: relative;
-    z-index: 1;
-}
-.or{
-    display: flex;
-}
-.line{
-    height: 1px;
-    width:20rem;
-    display:flex;
-    color: grey;
-    background-color: grey;
-    margin: 20px 30px;
-}
-.gmail{
-    height: 2.5rem;
-    width: 15rem;
-    background-color: aliceblue;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    margin: 10px;
-}
-.gmail:hover{
-    background-color: rgb(202, 195, 195);
-    box-shadow: 4px 4px 4px aliceblue;
-}
-h3{
-    color: aliceblue;
-}
-h1{
-    font-size: 50px;
-}
-h2{
-    font-size: 35px;
-}
-.des{
-    color: #2C4964;
-}
-@media (max-width:540px){
-    flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
+.or {
+  display: flex;
+}
+
+.line {
+  height: 1px;
+  width: 20rem;
+  display: flex;
+  color: grey;
+  background-color: grey;
+  margin: 20px 30px;
+}
+
+.gmail {
+  height: 2.5rem;
+  width: 15rem;
+  background-color: aliceblue;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.gmail:hover {
+  background-color: rgb(202, 195, 195);
+  box-shadow: 4px 4px 4px aliceblue;
+}
+
+h3 {
+  color: aliceblue;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+.des {
+  color: #2C4964;
+}
+
+@media (max-width: 540px) {
+  .input-container {
+      flex-direction: column; /* Stack inputs on smaller screens */
+      align-items: center; /* Center align */
+  }
+
+  .inputBox {
+      width: 90%; /* Full width on small devices */
+  }
+
+  .body {
+      width: 90%; /* Adjust the body width for small screens */
+  }
+}
