@@ -9,7 +9,7 @@
     <title>login-page</title>
 </head>
 <body>
-  <!-- navbar -->
+
   <section id="#Home">
     <nav>
       <div class="img-logo"></div>
@@ -26,7 +26,7 @@
     </nav>
   </section>
   
-    <!-- sidebar -->
+  
     <ul class="sidebar">
       <li><a href="home.html">Home</a></li>
       <li><a href="home.html">About us</a></li>
@@ -37,9 +37,6 @@
     </ul>  
 
 
-
-
-    <!-- login -->
     <center>
       <div class="background">
           <center>
@@ -81,14 +78,11 @@
     
     <script>
   
-
-      //  sidebar 
+ 
       function toggleSidebar() {
        const sidebar = document.querySelector('.sidebar');
        sidebar.classList.toggle('active'); }
 
-
-      //credentials saving
 
       document.getElementById('loginForm').addEventListener('submit',function(event){
         event.preventDefault();
