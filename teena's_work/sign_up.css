@@ -9,7 +9,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Navbar  */
 nav {
   display: flex;
   justify-content: space-between;
@@ -22,9 +21,9 @@ nav {
 
 .img-logo {
   height: 5rem;
-  width: auto; /* Use auto to maintain aspect ratio */
+  width: auto; 
   background-image: url('https://ehr.meditech.com/themes/ehrmeditech/images/meditech-logo.svg');
-  background-size: contain; /* Use contain to maintain aspect ratio */
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -59,7 +58,6 @@ nav {
   z-index: 1001; 
 }
 
-/* Sidebar  */
 .sidebar {
   position: fixed;
   top: 0;
@@ -147,17 +145,17 @@ p {
 }
 
 .background {
-  height: auto; /* Set to auto for better responsiveness */
-  min-height: 120vh; /* Ensure it covers minimum height */
+  height: auto; 
+  min-height: 120vh; 
   width: 100%;
   background-image: url(https://medi-pedia.com/wp-content/uploads/2016/08/medical-hd-photo-1080p-hdwallwide.com_.jpg);
-  background-size: cover; /* Use cover for better scaling */
+  background-size: cover;
   border: 2px solid white;
 }
 
 .box {
-  width: 100%; /* Full width for responsiveness */
-  max-width: 380px; /* Limit max width */
+  width: 100%; 
+  max-width: 380px; 
   height: 55vh;
   background: #1c1c1c;
   border-radius: 8px;
@@ -182,16 +180,16 @@ p {
 .inputBox {
   width: 70%;
   margin-bottom: 20px;
-  position: relative; /* Set position for the icon */
+  position: relative; 
 }
 
 .inputBox i {
-  position: absolute; /* Position the icon */
+  position: absolute; 
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
   color: gray;
-  font-size: 1.2rem; /* Adjust icon size */
+  font-size: 1.2rem;
 }
 
 .inputBox input {
@@ -199,12 +197,12 @@ p {
   padding: 10px 10px 10px 40px; 
   border-radius: 16px;
   border: 1px solid #ccc;
-  transition: border-color 0.3s ease; /* Smooth transition for border color */
+  transition: border-color 0.3s ease; 
 }
 
 .inputBox input:focus {
-  border-color: #00a99d; /* Change border color on focus */
-  outline: none; /* Remove outline */
+  border-color: #00a99d; 
+  outline: none; 
 }
 
 .inputBox input::placeholder {
@@ -246,7 +244,6 @@ form a:hover {
   border: none;
 }
 
-/* Neon button */
 .neon-button {
   background-color: #111; 
   border: 2px solid #00a99d; 
@@ -334,34 +331,33 @@ h2 {
   color: #2C4964;
 }
 
-/* Media Queries for Better Responsiveness */
 @media (max-width: 768px) {
   .body {
-      width: 90%; /* Adjust the body width for medium devices */
+      width: 90%; 
       padding: 5vh;
   }
 
   .box {
-      width: 90%; /* Full width for smaller screens */
+      width: 90%; 
   }
 
   .main-nav {
-      display: none; /* Hide main navigation on smaller screens */
+      display: none;
   }
 
   .menu-button {
-      display: block; /* Show menu button on smaller screens */
+      display: block; 
   }
 }
 
 @media (max-width: 540px) {
   .input-container {
-      flex-direction: column; /* Stack inputs on smaller screens */
-      align-items: center; /* Center align */
+      flex-direction: column; 
+      align-items: center;
   }
 
   .inputBox {
-      width: 90%; /* Full width on small devices */
+      width: 90%; 
   }
 
   .body {
